@@ -1,4 +1,4 @@
-# STM32F4 Example with SPL using KEIL 
+# STM32F4 Examples with SPL using KEIL 
 
 ## Getting Started
 
