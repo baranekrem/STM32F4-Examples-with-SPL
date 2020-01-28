@@ -1,0 +1,33 @@
+				KEIL ve Gerekli Araçların Kurulumu
+
+1.KEIL indir ve yükle. (MDK-ARM)
+https://www.keil.com/demo/eval/arm.htm
+
+2.Device Pack indir ve yükle. (STM32F4 - 2.14.0) 
+https://www.keil.com/dd2/pack/
+
+3. ST sitesini üye ol. (Giriş yap)
+https://www.st.com/content/st_com/en/user-registration.html?referrer=https%3a%2f%2fmy.st.com%2fcontent%2fmy_st_com%2fen.html
+
+4. Sürücüleri indir. (STSW-LINK004 - STSW-LINK007 - STSW-LINK009)
+https://www.st.com/en/development-tools/st-link-v2.html#tools-software
+
+5. Standart Periperal Library indir. (STM32F4 v1.8.0)
+https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-libraries/stsw-stm32065.html
+
+6. STSW-LINK004 ve STSW-LINK009 olan sürücüleri yükle (32/64 Bit diikat ederek.)
+
+7. 	-STM32F4 Disco kitini bilgisayara bağla.
+	-STSW-LINK007 içerisindeki(Windows Klasörü) ST-LinkUpgrade.exe yi çalıştır.
+	-"Device Connect"e tıkla ve ardından "YES"e basarak kartı güncelle.
+	-Kiti bilgisayardan çıkar ve tekrar tak.
+	-"Device Connect"e basarak yazılımın güncel olduğundan emni ol.
+
+8. STM32F4-Disovery Board için şema dosyasını indir. (SCHEMATICS)
+https://www.st.com/en/evaluation-tools/stm32f4discovery.html#resource
+
+9. STM32F407VG Datasheet dosyasını indir.
+https://www.st.com/resource/en/datasheet/stm32f407vg.pdf
+
+10. STM32F4 Reference Manuel dosyasını indir.
+https://www.st.com/content/ccc/resource/technical/document/reference_manual/3d/6d/5a/66/b4/99/40/d4/DM00031020.pdf/files/DM00031020.pdf/jcr:content/translations/en.DM00031020.pdf
