@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 #include "defines.h"
 
@@ -120,7 +121,7 @@ static void USART_SendString(USART_TypeDef* USARTx, char* s)
 	}
 }
 
-/* ['X']['Y'][LedNo][LedValue]['Z'] */ 
+/* ['X']['Y'][LedNo][LedValue]['Z'] */
 static void LED_StateMachine(uint8_t rxData)
 {
 	static uint8_t state = 0;
@@ -189,18 +190,18 @@ static void LED_StateMachine(uint8_t rxData)
 static void LED_Control(uint8_t ledNo, uint8_t value)
 {
 	uint8_t buffer[32];
-	
+
 	switch (ledNo)
 	{
-		case 1: GPIO_WriteBit(LED_GREEN_GPIO, LED_GREEN_PIN, value); break;
-		case 2: GPIO_WriteBit(LED_ORANGE_GPIO, LED_ORANGE_PIN, value); break;
-		case 3: GPIO_WriteBit(LED_RED_GPIO, LED_RED_PIN, value); break;
-		case 4: GPIO_WriteBit(LED_BLUE_GPIO, LED_BLUE_PIN, value); break;
+		case 1: GPIO_WriteBit(LED_GREEN_GPIO, LED_GREEN_PIN, (BitAction)value); break;
+		case 2: GPIO_WriteBit(LED_ORANGE_GPIO, LED_ORANGE_PIN, (BitAction)value); break;
+		case 3: GPIO_WriteBit(LED_RED_GPIO, LED_RED_PIN, (BitAction)value); break;
+		case 4: GPIO_WriteBit(LED_BLUE_GPIO, LED_BLUE_PIN, (BitAction)value); break;
 	}
-	
-	sprintf(buffer, "%d.LED = %d Durumuna Gecti\r\n", ledNo, value);
-	
-	USART_SendString(USART1, buffer);
+
+	sprintf((char *)buffer, (const char *)"%d.LED = %d Durumuna Gecti\n", ledNo, value);
+
+	USART_SendString(USART1, (char *)buffer);
 }
 
 
